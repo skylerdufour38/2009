@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="theme-color" content="#0f172a" />
+    <title>App Store Archive</title>
+    <meta
+      name="description"
+      content="Browse an archive of iOS App Store package metadata for classic iPhone applications."
+    />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" href="icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="masthead">
+        <div>
+          <p class="eyebrow">iOS Archive</p>
+          <h1>App Store</h1>
+        </div>
+        <div class="toolbar">
+          <label class="search-field" for="search">
+            <span class="sr-only">Search apps</span>
+            <input
+              id="search"
+              type="search"
+              placeholder="Search apps..."
+              aria-label="Search apps"
+            />
+          </label>
+          <label class="sort-field" for="sort">
+            <span class="sr-only">Sort apps</span>
+            <select id="sort" aria-label="Sort apps">
+              <option value="name">Sort: Name</option>
+              <option value="size-desc">Sort: Size (largest)</option>
+              <option value="size-asc">Sort: Size (smallest)</option>
+              <option value="version-desc">Sort: Version (newest)</option>
+            </select>
+          </label>
+        </div>
+      </header>
+
+      <main>
+        <section class="stats" aria-label="Archive summary">
+          <div class="stat-card">
+            <span class="stat-label">Apps</span>
+            <strong id="app-count">0</strong>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">Total Size</span>
+            <strong id="total-size">0 MB</strong>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">Platforms</span>
+            <strong>iOS</strong>
+          </div>
+        </section>
+
+        <section class="intro">
+          <p>
+            A curated archive of iOS App Store packages, including bundle identifiers,
+            archive paths, minimum OS versions, and package size details.
+          </p>
+        </section>
+
+        <section id="app-grid" class="app-grid" aria-live="polite"></section>
+
+        <section class="install-section" aria-labelledby="install-title">
+          <h2 id="install-title">Install App (Home Screen)</h2>
+          <ol>
+            <li>Open the GitHub Pages website in Safari.</li>
+            <li>Tap the Share button.</li>
+            <li>Select Add to Home Screen.</li>
+            <li>Edit the name if desired.</li>
+            <li>Tap Add.</li>
+            <li>Launch the archive from the new Home Screen icon.</li>
+          </ol>
+          <p>
+            Adding the website to the Home Screen creates a shortcut to the web app.
+            It does not automatically install an IPA package.
+          </p>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
