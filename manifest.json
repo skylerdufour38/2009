@@ -1,0 +1,17 @@
+{
+  "name": "App Store Archive",
+  "short_name": "App Store",
+  "description": "Archive of classic iOS App Store package metadata.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#f4f7fb",
+  "theme_color": "#0f172a",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
